@@ -1,0 +1,27 @@
+Pedido 1:
+  - Valor total: R$ 230.00
+  - Saldo valor: R$ 71.00
+  - Item 4: saldo quantidade 4
+  - Item 3: saldo quantidade 3
+
+Pedido 3:
+  - Valor total: R$ 4435.00
+  - Saldo valor: R$ 2563.00
+  - Item 3: saldo quantidade 60
+  - Item 4: saldo quantidade 5
+  - Item 1: saldo quantidade 30
+  - Item 2: saldo quantidade 9
+  - Item 3: saldo quantidade 55
+  - Item 1: saldo quantidade 36
+
+Pedido 5:
+  - Valor total: R$ 5115.00
+  - Saldo valor: R$ 3810.00
+  - Item 4: saldo quantidade 20
+  - Item 1: saldo quantidade 45
+  - Item 6: saldo quantidade 6
+  - Item 4: saldo quantidade 12
+  - Item 1: saldo quantidade 46
+  - Item 6: saldo quantidade 5
+  - Item 4: saldo quantidade 19
+  - Item 1: saldo quantidade 44
