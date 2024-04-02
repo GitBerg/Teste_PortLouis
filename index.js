@@ -49,6 +49,7 @@ function lerNotas(pastaNotas, pedidos) {
     for (const arquivo of arquivos) {
         const conteudo = fs.readFileSync(`${pastaNotas}/${arquivo}`, 'utf-8');
         const linhas = conteudo.split('\n');
+        const idNota = arquivo.split('.')[0];
 
         for (let linha of linhas) {
             try {
@@ -79,7 +80,7 @@ function lerNotas(pastaNotas, pedidos) {
                 }
 
                 // Adicionar nota ao array de notas
-                notas.push(nota);
+                notas.push([nota, idNota]);
             } catch (error) {
                 console.error(error.message);
             }
@@ -92,10 +93,10 @@ function lerNotas(pastaNotas, pedidos) {
 // Função para cruzar pedidos e notas e identificar itens pendentes
 function identificarItensPendentes(pedidos, notas) {
     const itensPendentes = {};
-
+    
     // Percorrer as notas e identificar itens pendentes
     for (const nota of notas) {
-        const { id_pedido, número_item: numero_item, quantidade_produto } = nota;
+        const { id_pedido, número_item: numero_item, quantidade_produto } = nota[0];
 
         for (let el in pedidos[`P${id_pedido}`]) {
             if (pedidos[`P${id_pedido}`][el]['número_item'] === numero_item) {
@@ -109,7 +110,7 @@ function identificarItensPendentes(pedidos, notas) {
                     itensPendentes[id_pedido] = itensPendentes[id_pedido] || { valor_total: 0, saldo_valor: 0, itens: [] };
                     itensPendentes[id_pedido].valor_total += qtd_pedido * val_produto;
                     itensPendentes[id_pedido].saldo_valor += saldoQuantidade * val_produto;
-                    itensPendentes[id_pedido].itens.push({ numero_item, saldo_quantidade: saldoQuantidade });
+                    itensPendentes[id_pedido].itens.push({ numero_item, saldo_quantidade: saldoQuantidade, notaID: nota[1] });
                 }
             }
         }
@@ -121,7 +122,7 @@ function identificarItensPendentes(pedidos, notas) {
 // Função para gravar a listagem de pedidos pendentes em um arquivo de texto
 function gravarListagemPedidosPendentes(listaPedidosPendentes, nomeArquivo) {
     const conteudo = Object.entries(listaPedidosPendentes).map(([id_pedido, dados]) => {
-        const itens = dados.itens.map(item => `  - Item ${item.numero_item}: saldo quantidade ${item.saldo_quantidade}`).join('\n');
+        const itens = dados.itens.map(item => `  - Item ${item.numero_item}: saldo quantidade ${item.saldo_quantidade} - Nota ID: ${item.notaID}`).join('\n');
         return `Pedido ${id_pedido}:\n  - Valor total: R$ ${dados.valor_total.toFixed(2)}\n  - Saldo valor: R$ ${dados.saldo_valor.toFixed(2)}\n${itens}\n`;
     }).join('\n');
 

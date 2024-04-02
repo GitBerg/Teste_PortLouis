@@ -1,33 +1,33 @@
 Pedido 1:
   - Valor total: R$ 460.00
   - Saldo valor: R$ 230.00
-  - Item 4: saldo quantidade 8
-  - Item 3: saldo quantidade 7
-  - Item 4: saldo quantidade 4
-  - Item 3: saldo quantidade 3
+  - Item 4: saldo quantidade 8 - Nota ID: N1
+  - Item 3: saldo quantidade 7 - Nota ID: N6
+  - Item 4: saldo quantidade 4 - Nota ID: N6
+  - Item 3: saldo quantidade 3 - Nota ID: N7
 
 Pedido 3:
   - Valor total: R$ 4790.00
   - Saldo valor: R$ 2808.00
-  - Item 2: saldo quantidade 10
-  - Item 3: saldo quantidade 60
-  - Item 4: saldo quantidade 5
-  - Item 1: saldo quantidade 30
-  - Item 4: saldo quantidade 15
-  - Item 2: saldo quantidade 9
-  - Item 3: saldo quantidade 55
-  - Item 1: saldo quantidade 36
+  - Item 2: saldo quantidade 10 - Nota ID: N5
+  - Item 3: saldo quantidade 60 - Nota ID: N5
+  - Item 4: saldo quantidade 5 - Nota ID: N5
+  - Item 1: saldo quantidade 30 - Nota ID: N5
+  - Item 4: saldo quantidade 15 - Nota ID: N9
+  - Item 2: saldo quantidade 9 - Nota ID: N9
+  - Item 3: saldo quantidade 55 - Nota ID: N9
+  - Item 1: saldo quantidade 36 - Nota ID: N9
 
 Pedido 5:
   - Valor total: R$ 5655.00
   - Saldo valor: R$ 4080.00
-  - Item 3: saldo quantidade 11
-  - Item 4: saldo quantidade 20
-  - Item 1: saldo quantidade 45
-  - Item 6: saldo quantidade 6
-  - Item 3: saldo quantidade 7
-  - Item 4: saldo quantidade 12
-  - Item 1: saldo quantidade 46
-  - Item 6: saldo quantidade 5
-  - Item 4: saldo quantidade 19
-  - Item 1: saldo quantidade 44
+  - Item 3: saldo quantidade 11 - Nota ID: N3
+  - Item 4: saldo quantidade 20 - Nota ID: N3
+  - Item 1: saldo quantidade 45 - Nota ID: N3
+  - Item 6: saldo quantidade 6 - Nota ID: N3
+  - Item 3: saldo quantidade 7 - Nota ID: N4
+  - Item 4: saldo quantidade 12 - Nota ID: N4
+  - Item 1: saldo quantidade 46 - Nota ID: N4
+  - Item 6: saldo quantidade 5 - Nota ID: N4
+  - Item 4: saldo quantidade 19 - Nota ID: N8
+  - Item 1: saldo quantidade 44 - Nota ID: N8
