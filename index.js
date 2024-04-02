@@ -50,8 +50,9 @@ function lerNotas(pastaNotas, pedidos) {
         const conteudo = fs.readFileSync(`${pastaNotas}/${arquivo}`, 'utf-8');
         const linhas = conteudo.split('\n');
 
-        for (const linha of linhas) {
+        for (let linha of linhas) {
             try {
+                linha = linha.trim()
                 const nota = JSON.parse(linha);
                 const { id_pedido, número_item: numero_item, quantidade_produto } = nota;
 
